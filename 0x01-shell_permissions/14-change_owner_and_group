@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown holberton -R betty .
+chown holberton -R betty .
