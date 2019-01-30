@@ -1,2 +1,2 @@
 #!/bin/bash
-chown usuario:grupo holberton -R betty .
+chown usuario:holberton -R betty .
