@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+#  Bash script FizzBuzz
+cont=1
+while [ $cont -le 100 ];
+do
+	if [ $((cont%3)) == 0 -a $((cont%5)) == 0 ]
+	then
+	    echo "FizzBuzz"
+	elif [ $((cont%3)) == 0 ]
+	then
+	    echo "Fizz"
+	elif [ $((cont%5)) == 0 ]
+	then
+	    echo "Buzz"
+	else
+	    echo $cont
+	fi
+    let cont=cont+1
+done
