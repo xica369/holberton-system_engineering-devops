@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+#  Bash script that displays numbers from 1 to 20 and use case
+cont=1
+while [ $cont -le 20 ];
+do
+    case $cont in
+	4)
+	    echo $cont
+	    echo "bad luck from China"
+	    ;;
+	9)
+	    echo $cont
+	    echo "bad luck from Japan"
+	    ;;
+	17)
+	    echo $cont
+	    echo "bad luck from Italy"
+	    ;;
+	*)
+	    echo $cont
+	    ;;
+    esac
+    let cont=cont+1
+done
