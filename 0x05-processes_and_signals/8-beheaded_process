@@ -1,7 +1,3 @@
 #!/usr/bin/env bash
 # This script is displaying kill a process
-li="$(pgrep -f 7-highlander)"
-for i in $li
-do
-    kill -9 "$i"
-done
+kill pgrep -f "$(pgrep -f 7-highlander)"
