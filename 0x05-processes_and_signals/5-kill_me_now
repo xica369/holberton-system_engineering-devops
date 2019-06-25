@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying kill a process
-li="$(grep -f 4-to_infinity_and_beyond)"
+li="$(pgrep -f 4-to_infinity_and_beyond)"
 for i in li
 do
     kill "$i"
