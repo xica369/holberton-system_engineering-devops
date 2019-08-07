@@ -1,5 +1,5 @@
 # Execute a command
-exec { 'addconfigurations-ssh':
-  command => 'echo -e "IdentityFile ~/.ssh/holberton \n PasswordAuthentication no" >> /etc/ssh/sshd_config',
+exec { 'configuration-ssh':
+  command => '/bin/echo -e "IdentityFile ~/.ssh/holberton\nPasswordAuthentication no" >> /etc/ssh/sshd_config',
   path    => '/usr/bin';
 }
