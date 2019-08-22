@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Create a certificate SSL using certbot and configure HAproxy
+
