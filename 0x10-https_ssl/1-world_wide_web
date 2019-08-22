@@ -4,13 +4,13 @@
 if (($# == 2))
 then
     subdom=$2.$1
-    echo "The subdomain $subdom" | tr '\n' ' '
+    echo "The subdomain $2" | tr '\n' ' '
     dig $subdom | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk -F" " '{print "is a " $4 " record and points to " $5}'
 else
     for var in www lb-01 web-01 web-02
     do
 	subdom=$var.$1
-	echo "The subdomain $subdom" | tr '\n' ' '
+	echo "The subdomain $var" | tr '\n' ' '
 	dig $subdom | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk -F" " '{print "is a " $4 " record and points to " $5}'
     done
 fi
