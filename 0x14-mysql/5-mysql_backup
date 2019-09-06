@@ -1,0 +1,3 @@
+B#The MySQL dump must contain all your MySQL databases
+mysqldump -u root -p --all-databases > backup.sql
+mysqldump -u root -p --all-databases | gzip > $day-$month-$year.sql.gz
