@@ -10,7 +10,7 @@ def recurse(subreddit, hot_list=[]):
     the function should return None. """
     headers = {'User-Agent': 'xica369'}
     url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
-    parameters = {'after': after}
+    parameters = {'after': 'after', 'limit': 100}
     response = requests.get(url, headers=headers, allow_redirects=False,
                             params=parameters)
 
