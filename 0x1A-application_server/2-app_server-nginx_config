@@ -1,0 +1,8 @@
+server {
+    listen 80; #Puerto de escucha
+    server_name 34.73.0.53 127.0.0.1; #Nombre o IP de servidor
+    location /airbnb-onepage {
+        include proxy_params;
+        proxy_pass http://127.0.0.1:5000/airbnb-onepage;
+    }
+}
