@@ -32,7 +32,7 @@ def count_words(subreddit, word_list):
                         word_dict[word_lis] += 1
 
         sort_dic = sorted(word_dict.items(), key=lambda x: x[1], reverse=True)
-        for key, val in sorted_dict:
+        for key, val in sort_dic:
             if val != 0:
                 print("{}: {}".format(key, val))
 
