@@ -31,9 +31,8 @@ def count_words(subreddit, word_list):
                     if word.lower() == word_lis.lower():
                         word_dict[word_lis] += 1
 
-        sort_dict = sorted(word_dict.items(), reverse=True)
-
-        for key, val in sort_dict:
+        sort_dic = sorted(word_dict.items(), key=lambda x: x[1], reverse=True)
+        for key, val in sorted_dict:
             if val != 0:
                 print("{}: {}".format(key, val))
 
