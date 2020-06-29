@@ -21,14 +21,15 @@ def count_words(subreddit, word_list):
 
     if hot_list:
         for word in word_list:
-            word_dict[word.lower()] = 0
+            word_dict[word] = 0
 
         for title in hot_list:
             title_split = title.split(" ")
 
             for word in title_split:
-                if word.lower() in word_dict:
-                    word_dict[word.lower()] += 1
+                for key in word_dict:
+                    if word.lower() == key.lower():
+                        word_dict[key] += 1
 
         sort_dict = sorted(word_dict.items(), reverse=True)
 
