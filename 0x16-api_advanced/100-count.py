@@ -24,24 +24,19 @@ def count_words(subreddit, word_list):
             word_dict[word.lower()] = 0
 
         for title in hot_list:
-            print(title)
             title_split = title.split(" ")
 
             for word in title_split:
                 if word.lower() in word_dict:
                     word_dict[word.lower()] += 1
 
-        flag = 0
         sort_dict = sorted(word_dict.items(), reverse=True)
+
         for key, val in sort_dict:
             if val != 0:
                 flag = 1
                 print("{}: {}".format(key, val))
 
-        if flag == 0:
-            print()
-
-    print()
 
 def recurse(subreddit, hot_list=[]):
     """
