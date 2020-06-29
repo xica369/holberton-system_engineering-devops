@@ -27,15 +27,9 @@ def count_words(subreddit, word_list):
             title_split = title.split(" ")
 
             for word in title_split:
-<<<<<<< HEAD
                 for word_lis in word_list:
                     if word.lower() == word_lis.lower():
                         word_dict[word_lis] += 1
-=======
-                for key in word_dict:
-                    if word.lower() == key.lower():
-                        word_dict[key] += 1
->>>>>>> e03ee9051d1f713d5835a4c203a92f20e3f5a090
 
         sort_dict = sorted(word_dict.items(), reverse=True)
 
